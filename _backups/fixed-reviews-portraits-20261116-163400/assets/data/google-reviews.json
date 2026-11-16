@@ -1,0 +1,26 @@
+{
+  "placeId": "ChIJ_7tJckXPl6QRI5d4R8F5tQQ",
+  "sourceUrl": "https://www.google.com/maps?cid=339311217971074851&hl=tr",
+  "observedAt": "2026-11-16T12:55:28.481Z",
+  "overallRatingDisplayed": "5,0",
+  "reviewCountDisplayed": "11 yorum",
+  "newestVerified": false,
+  "automaticUpdates": false,
+  "verificationNote": "Herkese açık Google Haritalar görünümündeki iki gerçek yorum. Tüm yorumlara erişim ve En yeni sıralaması oturum açılmasını istedi; en yeni iki yorum oldukları doğrulanamadı. Görünen kullanıcı adları ve yorum metinleri değiştirilmeden korunmuştur.",
+  "reviews": [
+    {
+      "author": "arda yapici",
+      "stars": 5,
+      "dateDisplayedAtCapture": "4 gün önce",
+      "text": "Ders çalışmak için mükemmel ortam hocalar çok ilgili",
+      "url": "https://maps.app.goo.gl/StbZeTaAJbmRCLBg9"
+    },
+    {
+      "author": "Özgür Sezgin",
+      "stars": 5,
+      "dateDisplayedAtCapture": "4 gün önce",
+      "text": "Çok ilgililer bütün hocalarıma teşekkür ediyorum",
+      "url": "https://maps.app.goo.gl/L1bWTwEiU6sCeaKB7"
+    }
+  ]
+}

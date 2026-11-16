@@ -1,0 +1,30 @@
+{
+  "placeId": "ChIJ_7tJckXPl6QRI5d4R8F5tQQ",
+  "sourceUrl": "https://www.google.com/maps?cid=339311217971074851&hl=tr",
+  "overallRatingDisplayed": "5,0",
+  "reviewCountDisplayed": "11 yorum",
+  "newestVerified": false,
+  "automaticUpdates": false,
+  "verificationNote": "Kullanıcının masaüstündeki yorumlar.txt dosyasından isimler, yıldızlar ve metinler aynen alınmıştır. İstenen iki yorum sabittir; otomatik yenilenmez. Google sınırlı görünüm nedeniyle bu iki yorumun bireysel paylaşım bağlantıları doğrulanamadığından bağlantılar işletmenin genel Google Haritalar sayfasına gider.",
+  "reviews": [
+    {
+      "author": "Enes Cagdas Sezgin",
+      "stars": 5,
+      "text": "İlgili öğretmenleri disiplinli çalışma ortamı ve kaliteli eğitim anlayışıyla harika bir kurum çocuğumun gelişimine çok büyük katkı sağlıyorlar emeği geçen herkese teşekkürler…",
+      "url": "https://www.google.com/maps?cid=339311217971074851&hl=tr",
+      "originalReviewUrl": null
+    },
+    {
+      "author": "Melike Zeren Kayahan",
+      "stars": 5,
+      "text": "Eğitim kalitesiyle, güler yüzlü ve ilgili kadrosuyla gerçekten örnek bir kurum. Özellikle öğretmenlerin bilgi birikimi, öğrencilerle yakından ilgilenmeleri, sabırları ve emekleri takdire şayan. Her öğrencinin gelişimine önem veren, motive eden ve destekleyen harika bir öğretmen kadrosuna sahipler. Böyle değerli ve işini severek yapan hocalarla eğitim almak büyük bir şans. Gönül rahatlığıyla herkese tavsiye ediyorum. Tüm hocalarıma emekleri için teşekkür ederim! 🌸👏",
+      "excerpt": "Eğitim kalitesiyle, güler yüzlü ve ilgili kadrosuyla gerçekten örnek bir kurum. Özellikle öğretmenlerin bilgi birikimi, öğrencilerle yakından ilgilenmeleri, sabırları ve emekleri takdire şayan. Her öğrencinin gelişimine önem veren, motive …",
+      "url": "https://www.google.com/maps?cid=339311217971074851&hl=tr",
+      "originalReviewUrl": null
+    }
+  ],
+  "fixedSelection": true,
+  "sourceProvidedBy": "user",
+  "sourceFile": "yorumlar.txt",
+  "sourceNotePreserved": "Google’dan alıntı · 16 Kasım 2026 tarihinde görüntülenmiştir."
+}

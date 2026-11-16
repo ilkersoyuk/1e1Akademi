@@ -1,0 +1,79 @@
+/* Natural portraits, aligned factual copy, manual 3 / 2 / 1 carousel. */
+#mezunlar { background:#252729; color:#f5f6f7; padding:var(--section-space,96px) var(--gutter,48px) 56px; overflow:hidden; --alumni-progress:20%; --alumni-columns:3; --alumni-gap:24px; }
+.alumni-shell { max-width:calc(var(--container,1280px) - var(--gutter,48px) * 2); margin:0 auto; }
+.alumni-heading { display:flex; justify-content:space-between; align-items:flex-end; gap:40px; }
+.alumni-kicker { color:#c4cbd0; font-size:12px; font-weight:600; letter-spacing:.1em; }
+#mezunlar h2 { margin-top:16px; color:#f5f6f7; font-weight:600; letter-spacing:-.035em; line-height:1.18; }
+#mezunlar h2 > span { color:#f5f6f7; }
+.alumni-intro { max-width:360px; }
+.alumni-intro > p { font-size:15px; line-height:1.75; color:#c4cbd0; }
+.alumni-controls { position:absolute; inset:0; pointer-events:none; }
+.alumni-nav-button { display:grid; place-items:center; width:46px; height:46px; border:1px solid #555b60; border-radius:50%; background:transparent; color:#f5f6f7; cursor:pointer; transition:background .2s,border-color .2s; }
+.alumni-nav-button:hover { background:#363b3f; border-color:#a4adb4; }
+.alumni-nav-button:focus-visible,.alumni-track:focus-visible,.alumni-preview-toggle:focus-visible,.alumni-instagram:focus-visible { outline:2px solid #29abe2; outline-offset:4px; }
+.alumni-gallery { position:relative; margin-top:32px; padding-inline:60px; --alumni-video-height:350px; }
+.alumni-controls .alumni-nav-button { position:absolute; top:calc(var(--alumni-video-height) / 2); transform:translateY(-50%); pointer-events:auto; z-index:3; background:#2d3033; border-color:#41464a; box-shadow:0 4px 14px #0002; }
+#alumni-prev { left:0; }
+#alumni-next { right:0; }
+.alumni-track { display:grid; grid-auto-flow:column; grid-auto-columns:calc((100% - (var(--alumni-columns) - 1) * var(--alumni-gap)) / var(--alumni-columns)); gap:var(--alumni-gap); overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scroll-behavior:smooth; overscroll-behavior-x:contain; scrollbar-width:none; align-items:stretch; padding:0; }
+.alumni-track::-webkit-scrollbar { display:none; }
+.alumni-card { display:flex; flex-direction:column; min-width:0; scroll-snap-align:start; background:#2d3033; border:1px solid #41464a; border-radius:11px; overflow:hidden; }
+.alumni-card.is-selected { border-color:#29abe2; }
+.alumni-media { aspect-ratio:4 / 5; position:relative; width:100%; flex:none; overflow:hidden; isolation:isolate; display:block; border:0; padding:0; border-radius:0; background:#252729; cursor:pointer; text-align:left; }
+.alumni-media:disabled { cursor:default; }
+.alumni-media > img,.alumni-preview { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% var(--portrait-position,50%); transform:scale(var(--portrait-scale,1)); transform-origin:50% var(--portrait-position,50%); filter:none; display:block; }
+/* Display portraits are already cropped to 4:5; preserve video framing separately. */
+.alumni-media > img { object-position:50% 50%; transform:none; }
+.alumni-preview { z-index:1; opacity:0; pointer-events:none; transition:opacity .22s ease; }
+.alumni-card.is-previewing .alumni-preview { opacity:1; }
+.alumni-play { position:absolute; z-index:2; right:14px; bottom:14px; display:grid; place-items:center; width:42px; height:42px; border:1px solid #ffffff80; border-radius:50%; color:#f5f6f7; background:#181b1edb; box-shadow:0 2px 10px #0002; }
+.alumni-play[hidden] { display:none; }
+.alumni-media:focus-visible { outline-offset:-5px; }
+.alumni-copy { display:flex; flex-direction:column; flex:1 1 auto; min-width:0; padding:16px; }
+#mezunlar .alumni-copy h3 { margin:0; min-height:var(--alumni-name-height,0px); font:600 18px/1.4 'Outfit',var(--font-brand); letter-spacing:-.015em; color:#f5f6f7; overflow-wrap:anywhere; }
+.alumni-copy > .alumni-placement { margin:5px 0 0; min-height:var(--alumni-placement-height,0px); font:400 13.5px/1.55 var(--font-brand); color:#cbd0d4; letter-spacing:0; overflow-wrap:anywhere; text-wrap:pretty; }
+.alumni-university,.alumni-degree { font:inherit; color:inherit; }
+.alumni-separator { color:#c4cbd0; }
+.alumni-rank-badge { display:flex; flex:none; justify-content:space-between; align-items:baseline; gap:7px; min-width:0; margin-top:14px; padding:12px 0 0; border:0; border-top:1px solid #41464a; border-radius:0; background:transparent; box-shadow:none; font-variant-numeric:tabular-nums; }
+.alumni-rank-title { color:#aeb8c0; font:400 12px/1.5 var(--font-brand); letter-spacing:0; white-space:nowrap; }
+.alumni-rank-values { display:inline-flex; align-items:baseline; gap:6px; font:500 14px/1.5 'Outfit',var(--font-brand); white-space:nowrap; }
+.alumni-rank-previous { color:#aeb8c0; font-weight:400; }
+.alumni-rank-arrow { color:#77cae9; }
+.alumni-rank-values strong { color:#77cae9; font-size:20px; font-weight:700; letter-spacing:-.015em; }
+.alumni-instagram { display:flex; justify-content:space-between; align-items:center; gap:10px; min-height:44px; margin-top:7px; padding-top:4px; color:#d5e2eb; font:500 13px/1.5 var(--font-brand); text-decoration:none; }
+.alumni-instagram > span { font-size:20px; }
+.alumni-instagram:hover { color:#29abe2; text-decoration:underline; text-underline-offset:4px; }
+.alumni-footer { display:flex; align-items:center; justify-content:space-between; gap:20px; padding-top:24px; }
+.alumni-position { display:flex; align-items:center; gap:12px; font-size:12px; color:#c4cbd0; font-variant-numeric:tabular-nums; }
+#alumni-current { color:#f5f6f7; }
+.alumni-meter { width:80px; height:2px; background:#555b60; }
+.alumni-meter > i { display:block; height:100%; width:var(--alumni-progress); background:#29abe2; transition:width .25s; }
+.alumni-footer > p { font-size:12px; color:#c4cbd0; }
+.alumni-footer > a { display:inline-flex; gap:14px; align-items:center; min-height:44px; color:#c4cbd0; font-size:13px; }
+.alumni-footer > a:hover { color:#29abe2; }
+.alumni-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media (max-width:1100px) { #mezunlar { --alumni-columns:2; --alumni-gap:20px; } }
+@media (max-width:639px) {
+ #mezunlar { --alumni-columns:1; --alumni-gap:16px; padding-bottom:40px; }
+ .alumni-heading { display:grid; grid-template-columns:1fr; gap:16px; }
+ .alumni-intro { max-width:36ch; }
+ .alumni-intro > p { font-size:13px; line-height:1.65; }
+ #mezunlar { padding-inline:12px; }
+ .alumni-nav-button { width:44px; height:48px; border-radius:14px; }
+ .alumni-gallery { margin-top:24px; padding-inline:50px; }
+ .alumni-copy { padding:14px; }
+ .alumni-rank-badge { flex-wrap:wrap; gap:4px 10px; }
+ .alumni-rank-title { flex:1 0 100%; }
+ .alumni-rank-values { font-size:15px; }
+ .alumni-rank-values strong { font-size:23px; }
+ .alumni-footer { flex-wrap:wrap; gap:5px 16px; padding-top:16px; }
+ .alumni-footer > p { order:3; width:100%; }
+ .alumni-meter { width:56px; }
+}
+@media (max-width:359px) {
+ .alumni-intro { grid-template-columns:1fr; gap:12px; }
+ .alumni-controls { justify-content:flex-start; }
+ .alumni-rank-values { gap:5px; font-size:13px; }
+ .alumni-rank-values strong { font-size:22px; }
+}
+@media (prefers-reduced-motion:reduce) { .alumni-track { scroll-behavior:auto; } .alumni-preview,.alumni-meter > i,.alumni-nav-button { transition:none; } }
