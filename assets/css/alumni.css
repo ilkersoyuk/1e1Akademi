@@ -10,7 +10,7 @@
 .alumni-controls { position:absolute; inset:0; pointer-events:none; }
 .alumni-nav-button { display:grid; place-items:center; width:46px; height:46px; border:1px solid #555b60; border-radius:50%; background:transparent; color:#f5f6f7; cursor:pointer; transition:background .2s,border-color .2s; }
 .alumni-nav-button:hover { background:#363b3f; border-color:#a4adb4; }
-.alumni-nav-button:focus-visible,.alumni-track:focus-visible,.alumni-preview-toggle:focus-visible,.alumni-instagram:focus-visible { outline:2px solid #29abe2; outline-offset:4px; }
+.alumni-nav-button:focus-visible,.alumni-track:focus-visible,.alumni-preview-link:focus-visible,.alumni-preview-control:focus-visible,.alumni-instagram:focus-visible { outline:2px solid #29abe2; outline-offset:4px; }
 .alumni-gallery { position:relative; margin-top:32px; padding-inline:60px; --alumni-video-height:350px; }
 .alumni-controls .alumni-nav-button { position:absolute; top:calc(var(--alumni-video-height) / 2); transform:translateY(-50%); pointer-events:auto; z-index:3; background:#2d3033; border-color:#41464a; box-shadow:0 4px 14px #0002; }
 #alumni-prev { left:0; }
@@ -20,22 +20,23 @@
 .alumni-card { display:flex; flex-direction:column; min-width:0; scroll-snap-align:start; background:#2d3033; border:1px solid #41464a; border-radius:11px; overflow:hidden; }
 .alumni-card.is-selected { border-color:#41464a; }
 .alumni-card { transition:border-color .18s ease; }
-.alumni-card.is-previewing,.alumni-card:focus-within { border-color:#29abe2; }
+.alumni-card.is-playing,.alumni-card:focus-within { border-color:#29abe2; }
 .alumni-media::after { content:""; position:absolute; inset:0; z-index:3; box-sizing:border-box; border:2px solid transparent; pointer-events:none; transition:border-color .18s ease; }
-.alumni-media:focus-visible::after { border-color:#29abe2; }
+.alumni-media:focus-within::after { border-color:#29abe2; }
 @media (hover:hover) and (pointer:fine) {
  .alumni-card:has(.alumni-media:hover) { border-color:#29abe2; }
  .alumni-media:hover::after { border-color:#29abe2; }
 }
 .alumni-media { aspect-ratio:9 / 16; scroll-margin-top:120px; scroll-margin-bottom:16px; position:relative; width:100%; flex:none; overflow:hidden; isolation:isolate; display:block; border:0; padding:0; border-radius:0; background:#252729; cursor:pointer; text-align:left; }
-.alumni-media:disabled { cursor:default; }
-.alumni-media > img,.alumni-preview { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:50% 0%; transform:none; transform-origin:50% 0%; filter:none; display:block; }
+.alumni-preview-link { position:absolute; inset:0; display:block; color:inherit; }
+.alumni-preview-control:disabled { cursor:default; }
+.alumni-preview-link > img,.alumni-preview { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:50% 0%; transform:none; transform-origin:50% 0%; filter:none; display:block; }
 /* Covers and previews share a full 9:16 frame: top aligned, no individual zoom or bottom crop. */
 .alumni-preview { z-index:1; opacity:0; pointer-events:none; transition:opacity .22s ease; }
 .alumni-card.is-previewing .alumni-preview { opacity:1; }
-.alumni-play { position:absolute; z-index:2; right:14px; bottom:14px; display:grid; place-items:center; width:42px; height:42px; border:1px solid #ffffff80; border-radius:50%; color:#f5f6f7; background:#181b1edb; box-shadow:0 2px 10px #0002; }
+.alumni-play { position:absolute; z-index:4; right:12px; bottom:12px; display:grid; place-items:center; width:44px; height:44px; min-width:44px; min-height:44px; padding:0; appearance:none; cursor:pointer; pointer-events:auto; border:1px solid #ffffff80; border-radius:50%; color:#f5f6f7; background:#181b1edb; box-shadow:0 2px 10px #0002; }
 .alumni-play[hidden] { display:none; }
-.alumni-media:focus-visible { outline-offset:-5px; }
+.alumni-preview-link:focus-visible { outline-offset:-5px; }
 .alumni-copy { display:flex; flex-direction:column; flex:1 1 auto; min-width:0; padding:16px; }
 #mezunlar .alumni-copy h3 { margin:0; min-height:var(--alumni-name-height,0px); font:600 18px/1.4 'Outfit',var(--font-brand); letter-spacing:-.015em; color:#f5f6f7; overflow-wrap:anywhere; }
 .alumni-copy > .alumni-placement { margin:5px 0 0; min-height:var(--alumni-placement-height,0px); font:400 13.5px/1.55 var(--font-brand); color:#cbd0d4; letter-spacing:0; overflow-wrap:anywhere; text-wrap:pretty; }
